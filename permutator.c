@@ -40,10 +40,10 @@ int main(int argc, char** argv) {
 		int totalen = 0;
 		//one extra space for each argument
 		for (i = 1; i < argc; i++) 
-			totalen+= strlen(argv[i]) + 1;
+			totalen += strlen(argv[i]) + 1;
 			
 		//permute
-		char* buffer = (char*) malloc(totalen);	
+		char* buffer = (char*) malloc(totalen*sizeof(char));	
 		permute(argc - 1, 0, buffer, q);
 	
 		//clean-up
